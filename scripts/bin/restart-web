@@ -1,0 +1,11 @@
+#!/bin/bash
+set -ex
+
+# Restart PHP
+# TODO: restart all PHPs, not just this hard-coded version
+sudo /bin/launchctl unload -w /Library/LaunchDaemons/dev.php-fpm.5.4.17.plist;
+sudo /bin/launchctl load -w /Library/LaunchDaemons/dev.php-fpm.5.4.17.plist;
+sudo /bin/launchctl start dev.php-fpm.5.4.17;
+
+# Restart nginx
+sudo lunchy restart dev.nginx;
