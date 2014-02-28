@@ -1,5 +1,6 @@
 alias o='open .'
 alias s='subl .'
+alias ss='subl Source/typo3conf/ext/t3site/Sites/Main/Resources'
 
 alias gitlog='clear;git log -40 --pretty=oneline;echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
 alias git-unpushed='clear; git fetch --all; git log -40 --pretty=oneline origin/master..HEAD; echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
