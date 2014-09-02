@@ -1,11 +1,16 @@
 #!/bin/bash
-set -ex
+set -e
 
-# Restart PHP
-# TODO: restart all PHPs, not just this hard-coded version
-sudo /bin/launchctl unload -w /Library/LaunchDaemons/dev.php-fpm.5.4.17.plist;
-sudo /bin/launchctl load -w /Library/LaunchDaemons/dev.php-fpm.5.4.17.plist;
-sudo /bin/launchctl start dev.php-fpm.5.4.17;
+# Restart your PHPs
+echo 'Killing all PHPs...'
+sudo killall php-fpm
+
+echo 'Now starting all PHPs...'
+for f in $(sudo lunchy list dev.php-fpm )
+do
+	sudo lunchy start ${f} > /dev/null
+done
 
 # Restart nginx
-sudo lunchy restart dev.nginx;
+echo 'Restarting nginx...'
+sudo lunchy restart dev.nginx > /dev/null && echo 'DONE!'
