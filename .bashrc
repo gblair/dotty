@@ -24,6 +24,22 @@ export XDEBUG_CONFIG="idekey=phpstorm1"
 export PATH=bin:node_modules/.bin:/usr/local/bin:/usr/bin:/bin:$PATH
 export PATH=/usr/sed-4.2/bin:$PATH
 
+# Git resolve submodule! https://github.com/lthurston/git-resolve-submodule
+export GOPATH=${HOME}/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+
+# https://github.com/lthurston/git-resolve-submodule
+function cm {
+  path=`git resolve-submodule $1`
+  if [ $? -eq 0 ]; then
+    cd $path
+  else
+    echo 'No se puede.'
+  fi
+}
+
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
