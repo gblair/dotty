@@ -1,15 +1,5 @@
-alias o='open .'
-alias s='subl .'
-alias ss='subl Source/typo3conf/ext/t3site/Sites/'
-alias c='php Source/typo3/cli_dispatch.phpsh cleartypo3cache all'
-
-alias gitlog='clear;git log -40 --pretty=oneline;echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
-alias git-unpushed='clear; git fetch --all; git log -40 --pretty=oneline origin/master..HEAD; echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
-alias git-ignore-mode="git config core.filemode false; git submodule foreach \"git config core.filemode false\""
-
-alias php-log='sudo tail -f /opt/boxen/log/php/*'
-alias nginx-log='sudo tail -f /opt/boxen/log/nginx/*'
-alias flush-dns="dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $DIR/aliases
 
 export PATH=$PATH:$HOME/.dotfiles/scripts/bin
 
