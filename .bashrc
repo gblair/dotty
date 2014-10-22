@@ -3,7 +3,7 @@ source $DIR/aliases
 
 export PATH=$PATH:$HOME/.dotfiles/scripts/bin
 
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+#export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
