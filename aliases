@@ -16,3 +16,5 @@ alias git-ignore-mode="git config core.filemode false; git submodule foreach \"g
 alias php-log='sudo tail -f /opt/boxen/log/php/*'
 alias nginx-log='sudo tail -f /opt/boxen/log/nginx/*'
 alias flush-dns="dscacheutil -flushcache;sudo killall -HUP mDNSResponder"	
+
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
