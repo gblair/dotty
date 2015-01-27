@@ -37,7 +37,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [ -f ~/.dotfiles/scripts/git-completion.sh ] && source ~/.dotfiles/scripts/git-completion.sh
 
 # Non-repo-trackable things (passwords, auths, etc.)
-[ -f ~/.dotfiles/.private ] && source ~/.dotfiles/.private
+[ -f ~/.sec/aliases ] && source ~/.sec/aliases
 
 # Boxen thing
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
