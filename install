@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo '[ -f ~/.dotfiles/.bashrc ] && source ~/.dotfiles/.bashrc' >> ~/.bash_profile
+
