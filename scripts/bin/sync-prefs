@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+# Quick/dirty sync of preferences from IntelliJIdea from another machine
+
+puts 'From what host?'
+host = (STDIN.tty?) ? $stdin.gets.chomp : 'Cannot read from stdin'
+puts 'Ok thanks. Here we go!'
+
+# Assumes username is the same between matcheens ;)
+prefix = "#{ENV['HOME']}"
+[
+	'Library/Preferences/IntelliJIdea14',
+	"Library/Application Support/IntelliJIdea14"
+].each do |p|
+	puts "Syncing '#{prefix}/#{p}'"
+	cmd = "rsync -rsuvzh #{host}:'#{prefix}/#{p}' '#{prefix}/#{p}'"
+	system cmd
+end
+
+puts 'All done!'
