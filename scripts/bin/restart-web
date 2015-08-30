@@ -3,7 +3,9 @@ set -e
 
 # Restart your PHPs
 echo 'Killing all PHPs...'
+set +e
 sudo killall php-fpm
+set -e
 
 echo 'Now starting all PHPs...'
 for f in $(sudo lunchy list dev.php-fpm )

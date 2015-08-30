@@ -19,6 +19,5 @@ alias gsu="git submodule update --init --recursive"
 
 alias php-log='sudo tail -f /opt/boxen/log/php/*'
 alias nginx-log='sudo tail -f /opt/boxen/log/nginx/*'
-alias flush-dns="sudo discoveryutil udnsflushcaches"
 
 alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
