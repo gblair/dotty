@@ -3,7 +3,9 @@ set -e
 
 [ $# -lt 1 ] && echo 'NOT ENOUGH ARGS MAYNOS. Go "add-cache-clearing-user [PROJECT]"' && exit 1
 
-mysql -uroot "$1_dev" -e 'INSERT INTO be_users(username, password) VALUES ("_cli_cleartypo3cache", "omg omg whatever *@#@");'
+DB_NAME=`echo "$1_dev"|tr '-' '_'`
+
+mysql -uroot $DB_NAME -e 'INSERT INTO be_users(username, password) VALUES ("_cli_cleartypo3cache", "omg omg whatever *@#@");'
 
 echo 'Ok you are all set'
 
