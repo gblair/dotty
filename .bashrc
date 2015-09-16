@@ -19,16 +19,6 @@ export GOPATH=${HOME}/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 
-# https://github.com/lthurston/git-resolve-submodule
-function cm {
-  path=`git resolve-submodule $1`
-  if [ $? -eq 0 ]; then
-    cd $path
-  else
-    echo 'No se puede.'
-  fi
-}
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
