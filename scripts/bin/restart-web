@@ -8,8 +8,9 @@ sudo killall php-fpm
 set -e
 
 echo 'Now starting all PHPs...'
-for f in $(sudo lunchy list dev.php-fpm )
+for f in $( sudo lunchy list dev.php-fpm )
 do
+	echo "Starting $f"
 	sudo lunchy start ${f} > /dev/null
 done
 
