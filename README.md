@@ -1,6 +1,6 @@
 ## Dotty
 
-These are bash-centric dotfiles.  Nothing fancy in the least, just a few things that help speed up my flow.
+These are bash-centric dotfiles.  Nothing fancy in the least, just a few things that won't pants my flow.
 
 ```
 cd ~/
