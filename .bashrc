@@ -5,6 +5,8 @@ source $DIR/aliases
 
 export PATH=$PATH:$HOME/.dotfiles/scripts/bin
 
+export EDITOR=vim
+
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export RAILS_ENV=development
