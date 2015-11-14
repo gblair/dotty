@@ -11,6 +11,8 @@ alias be='bundle exec'
 alias bb='subl /opt/boxen'
 alias bbb='subl /opt/boxen/repo'
 
+alias ∆='diff'
+
 alias gitlog='clear;git log -40 --pretty=oneline;echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
 alias git-unpushed='clear; git fetch --all; git log -40 --pretty=oneline origin/master..HEAD; echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
 alias git-ignore-mode="git config core.filemode false; git submodule foreach \"git config core.filemode false\""
