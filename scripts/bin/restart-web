@@ -14,6 +14,10 @@ do
 	sudo lunchy start ${f} > /dev/null
 done
 
+# Restart mysql
+echo 'Restarting mysql...'
+sudo lunchy restart dev.mysql > /dev/null && echo 'DONE!'
+
 # Restart nginx
 echo 'Restarting nginx...'
 sudo lunchy restart dev.nginx > /dev/null && echo 'DONE!'
