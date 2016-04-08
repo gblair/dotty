@@ -1,0 +1,15 @@
+#!/bin/bash
+set -ex
+
+[ $# -lt 1 ] && echo 'NOT ENOUGH ARGS MAYNOS. Go "add-typo3-backend-users [PROJECT]"' && exit 1
+
+DB_NAME=`echo "$1_dev"|tr '-' '_'`
+
+for user in ( _cli_cleartypo3cache _cli_lowlevel _cli_scheduler )
+do
+mysql -uroot $DB_NAME -e "INSERT INTO be_users(username, password) VALUES ('${user}', 'omg omg whatever *@#@') ON DUPLICATE KEY UPDATE;"
+done
+
+echo 'Ok you are all set'
+
+exit 0
