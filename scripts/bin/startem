@@ -1,11 +1,11 @@
 #!/bin/bash
 
-open /Applications/Mail.app
 open /Applications/Messages.app
 open /Applications/Slack.app
-open /Applications/Utilities/Terminal.app
+open /Applications/iTerm.app
 open /Applications/Wunderlist.app
 open /Applications/Harvest.app
 open '/Applications/Google Chrome.app'
+open '/Applications/Google Chrome Canary.app'
 
 exit
