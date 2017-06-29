@@ -32,3 +32,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Boxen thing
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+# Add all ssh keys to keychain
+ssh-add -kA >/dev/null 2>&1
+
