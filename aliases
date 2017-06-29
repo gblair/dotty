@@ -25,3 +25,9 @@ alias nginx-log='sudo tail -f /opt/boxen/log/nginx/*'
 
 alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 alias show-open-ports='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+
+# This one (credit @scryptmouse) can auto-jam your staged changes into a previous commit of your
+# choice. It will leave your unstaged changes alone. Call it like this (once you've got your desired
+# changes staged):
+#  fixup [target-commit-ref]
+alias fixup='!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f'
