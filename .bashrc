@@ -13,7 +13,7 @@ export RAILS_ENV=development
 export RAKE_ENV=development
 export XDEBUG_CONFIG="idekey=phpstorm1"
 
-export PATH=bin:node_modules/.bin:/usr/local/bin:/usr/bin:/bin:$PATH
+export PATH=bin:node_modules/.bin:vendor/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:$PATH
 export PATH=/usr/sed-4.2/bin:$PATH
 
 # Git resolve submodule! https://github.com/lthurston/git-resolve-submodule
