@@ -5,6 +5,7 @@ alias s='subl .'
 alias ss='subl Source/typo3conf/ext/t3site/Sites/'
 alias sss='ss; Script/watch'
 alias c='php Source/typo3/cli_dispatch.phpsh cleartypo3cache all'
+alias m='php Source/typo3/cli_dispatch.phpsh extbase migration:runAll'
 alias i='/Applications/IntelliJ\ IDEA\ 14.app/Contents/MacOS/idea `pwd`'
 alias be='bundle exec'
 
