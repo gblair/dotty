@@ -9,8 +9,6 @@ export EDITOR=vim
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export RAILS_ENV=development
-export RAKE_ENV=development
 export XDEBUG_CONFIG="idekey=phpstorm1"
 
 export PATH=bin:node_modules/.bin:vendor/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:$PATH
