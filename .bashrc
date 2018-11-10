@@ -34,3 +34,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Add all ssh keys to keychain
 ssh-add -kA >/dev/null 2>&1
 
+export PATH="$HOME/.pgenv/bin:$HOME/.pgenv/pgsql/bin:$PATH"
