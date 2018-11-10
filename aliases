@@ -2,29 +2,17 @@
 
 alias o='open .'
 alias s='subl .'
-alias ss='subl Source/typo3conf/ext/t3site/Sites/'
-alias sss='ss; Script/watch'
-alias c='php Source/typo3/cli_dispatch.phpsh cleartypo3cache all'
 alias f='foreman start'
-alias m='php Source/typo3/cli_dispatch.phpsh extbase migration:runAll'
-alias i='/Applications/IntelliJ\ IDEA\ 14.app/Contents/MacOS/idea `pwd`'
 alias be='bundle exec'
-
-alias bb='subl /opt/boxen'
-alias bbb='subl /opt/boxen/repo'
+alias fspec='be rspec --format progress --only-failures --fail-fast --order defined'
 
 alias ∆='diff'
 
 alias gitlog='clear;git log -40 --pretty=oneline;echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
-alias git-unpushed='clear; git fetch --all; git log -40 --pretty=oneline origin/master..HEAD; echo "... THE REST WERE CHOPPED OUT FOR BREVITY ..."'
 alias git-ignore-mode="git config core.filemode false; git submodule foreach \"git config core.filemode false\""
 alias git-conflicts="git diff --name-only | xargs grep -il '<<<<<<' | grep -v filter|uniq | xargs subl"
 alias gsu="git submodule update --init --recursive"
 
-alias php-log='sudo tail -f /opt/boxen/log/php/*'
-alias nginx-log='sudo tail -f /opt/boxen/log/nginx/*'
-
-alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 alias show-open-ports='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
 
 # This one (credit @scryptmouse) can auto-jam your staged changes into a previous commit of your
@@ -34,3 +22,4 @@ alias show-open-ports='sudo lsof -i | grep LISTEN'        # openPorts:    All li
 alias fixup='!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f'
 
 alias git=hub
+
